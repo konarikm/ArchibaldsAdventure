@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://5qafcuw4h25c"]
+
+[ext_resource type="Script" uid="uid://k0ph50u02cv1" path="res://scripts/main_menu.gd" id="1_l6cm7"]
+
+[node name="MainMenu" type="Node2D" unique_id=773524043]
+script = ExtResource("1_l6cm7")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=259221388]
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=1140292168]
+offset_left = 391.0
+offset_top = 87.0
+offset_right = 765.0
+offset_bottom = 170.0
+theme_override_colors/font_color = Color(0.85452086, 0.5338497, 0.9192368, 1)
+theme_override_colors/font_shadow_color = Color(0.6514241, 0.29678825, 0.6934311, 0.6431373)
+theme_override_colors/font_outline_color = Color(0.16168436, 0, 0.96990246, 1)
+theme_override_constants/line_spacing = 3
+theme_override_font_sizes/font_size = 60
+text = "Pinky Wizard"
+
+[node name="Button" type="Button" parent="CanvasLayer" unique_id=1188924645]
+offset_left = 409.0
+offset_top = 424.0
+offset_right = 751.0
+offset_bottom = 487.0
+theme_override_colors/font_color = Color(0.8745098, 0.6039216, 0.8745098, 1)
+theme_override_colors/font_pressed_color = Color(0.9460152, 0.5528403, 0.9464063, 1)
+theme_override_colors/font_hover_color = Color(0.6925585, 0.088659175, 0.7087036, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.5225224, 0.037035603, 0.5351326, 1)
+theme_override_font_sizes/font_size = 40
+text = "Play Game"
+
+[connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]

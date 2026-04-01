@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dnabab6b1ude1"]
+
+[sub_resource type="Gradient" id="Gradient_oitf5"]
+offsets = PackedFloat32Array(0.0042735045, 0.16666667, 0.34615386, 0.56837606, 1)
+colors = PackedColorArray(0.23504242, 0.010274929, 0.2941385, 1, 0.4710226, 0.1695073, 0.5098231, 1, 0.7118584, 0.54004115, 0.6607369, 1, 0.8627451, 0.6039216, 0.8666667, 1, 1, 0.37254903, 1, 0)
+
+[node name="Magic" type="Node2D" unique_id=1510203498]
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=842196975]
+amount = 1500
+lifetime = 0.02
+speed_scale = 0.35
+randomness = 0.75
+emission_shape = 1
+emission_sphere_radius = 86.0
+spread = 21.0
+gravity = Vector2(-3000, 0)
+angular_velocity_min = -500.0
+linear_accel_max = 60.0
+scale_amount_max = 8.0
+color_ramp = SubResource("Gradient_oitf5")

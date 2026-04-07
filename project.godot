@@ -23,6 +23,10 @@ GameManager="*uid://hcq7e6sw3a7o"
 
 window/stretch/mode="canvas_items"
 
+[dotnet]
+
+project/assembly_name="PinkyWizard"
+
 [global_group]
 
 Player=""

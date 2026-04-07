@@ -1,7 +1,7 @@
-[gd_scene format=4 uid="uid://dqgiwpiwjssft"]
+[gd_scene format=4 uid="uid://blvl2pinky0002"]
 
 [ext_resource type="Texture2D" uid="uid://wdejrrcjvc4u" path="res://assets/MossyCavern/Mossy Tileset/Mossy - BackgroundDecoration.png" id="1_7p6j4"]
-[ext_resource type="Script" uid="uid://4gxpm7r75bja" path="res://scripts/level_1.gd" id="1_wrinw"]
+[ext_resource type="Script" uid="uid://blvl2script002" path="res://scripts/level_2.gd" id="1_wrinw"]
 [ext_resource type="Texture2D" uid="uid://bu2xxuay6y8rp" path="res://assets/MossyCavern/Mossy Tileset/Mossy - Hanging Plants.png" id="2_6444e"]
 [ext_resource type="Texture2D" uid="uid://c838fup1uc5qs" path="res://assets/MossyCavern/Mossy Tileset/Mossy - Decorations&Hazards.png" id="3_evi0p"]
 [ext_resource type="Texture2D" uid="uid://crcb1g8u6ijhr" path="res://assets/MossyCavern/Mossy Tileset/Mossy - TileSet.png" id="4_lsmp6"]
@@ -200,9 +200,6 @@ texture_region_size = Vector2i(512, 512)
 4:2/0 = 0
 5:2/0 = 0
 6:2/0 = 0
-0:3/0 = 0
-1:3/0 = 0
-2:3/0 = 0
 3:3/0 = 0
 4:3/0 = 0
 5:3/0 = 0
@@ -368,109 +365,117 @@ sources/1 = SubResource("TileSetAtlasSource_oovug")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lsmp6"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_levelend1"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_levelend2"]
 size = Vector2(200, 3000)
 
-[node name="Level 1" type="Node2D" unique_id=1533892984]
+[node name="Level 2" type="Node2D" unique_id=1533892985]
 script = ExtResource("1_wrinw")
 
-[node name="Tilemaps" type="Node" parent="." unique_id=683774961]
+[node name="Tilemaps" type="Node" parent="." unique_id=683774962]
 
-[node name="Background" type="TileMapLayer" parent="Tilemaps" unique_id=643275417]
+[node name="Background" type="TileMapLayer" parent="Tilemaps" unique_id=643275418]
 modulate = Color(1, 1, 1, 0.3372549)
 tile_map_data = PackedByteArray("AAD7//3/AAACAAAAAAD7//7/AAACAAEAAAD7////AAACAAIAAAD7/wAAAAACAAMAAAD7/wEAAAACAAQAAAD8//3/AAADAAAAAAD8//7/AAADAAEAAAD8////AAADAAIAAAD8/wAAAAADAAMAAAD8/wEAAAADAAQAAAD9//3/AAAEAAAAAAD9//7/AAAEAAEAAAD9////AAAEAAIAAAD9/wAAAAAEAAMAAAD9/wEAAAAEAAQAAAD///7/AAACAAAAAAD/////AAACAAEAAAD//wAAAAACAAIAAAD//wEAAAACAAMAAAD//wIAAAACAAQAAAAAAP7/AAADAAAAAAAAAP//AAADAAEAAAAAAAAAAAADAAIAAAAAAAEAAAADAAMAAAAAAAIAAAADAAQAAAABAP7/AAAEAAAAAAABAP//AAAEAAEAAAABAAAAAAAEAAIAAAABAAEAAAAEAAMAAAABAAIAAAAEAAQAAAAEAP3/AAACAAAAAAAEAP7/AAACAAEAAAAEAP//AAACAAIAAAAEAAAAAAACAAMAAAAEAAEAAAACAAQAAAAFAP3/AAADAAAAAAAFAP7/AAADAAEAAAAFAP//AAADAAIAAAAFAAAAAAADAAMAAAAFAAEAAAADAAQAAAAGAP3/AAAEAAAAAAAGAP7/AAAEAAEAAAAGAP//AAAEAAIAAAALAP7/AAACAAAAAAALAP//AAACAAEAAAALAAAAAAACAAIAAAALAAEAAAACAAMAAAALAAIAAAACAAQAAAAMAP7/AAADAAAAAAAMAP//AAADAAEAAAAMAAAAAAADAAIAAAAMAAEAAAADAAMAAAAMAAIAAAADAAQAAAANAP7/AAAEAAAAAAANAP//AAAEAAEAAAANAAAAAAAEAAIAAAANAAEAAAAEAAMAAAANAAIAAAAEAAQAAAAPAP3/AAACAAAAAAAPAP7/AAACAAEAAAAPAP//AAACAAIAAAAPAAAAAAACAAMAAAAPAAEAAAACAAQAAAAQAP3/AAADAAAAAAAQAP7/AAADAAEAAAAQAP//AAADAAIAAAAQAAAAAAADAAMAAAAQAAEAAAADAAQAAAARAP3/AAAEAAAAAAARAP7/AAAEAAEAAAARAP//AAAEAAIAAAAXAAAAAAAEAAIAAAAbAP3/AAACAAAAAAAbAP7/AAACAAEAAAAbAP//AAACAAIAAAAbAAAAAAACAAMAAAAbAAEAAAACAAQAAAAcAP3/AAADAAAAAAAcAP7/AAADAAEAAAAcAP//AAADAAIAAAAcAAAAAAADAAMAAAAcAAEAAAADAAQAAAAdAP3/AAAEAAAAAAAdAP7/AAAEAAEAAAAdAP//AAAEAAIAAAAUAP7/AAACAAAAAAAUAP//AAACAAEAAAAUAAAAAAACAAIAAAAVAP7/AAADAAAAAAAVAP//AAADAAEAAAAVAAAAAAADAAIAAAAWAP7/AAAEAAAAAAAWAP//AAAEAAEAAAAWAAAAAAAEAAIAAAA=")
 tile_set = SubResource("TileSet_wrinw")
 
-[node name="Hanging Plants" type="TileMapLayer" parent="Tilemaps" unique_id=389451057]
+[node name="Hanging Plants" type="TileMapLayer" parent="Tilemaps" unique_id=389451058]
 tile_map_data = PackedByteArray("AAD6//3/AAAAAAIAAAD6//7/AAAAAAMAAAD6////AAAAAAQAAAAAAP3/AAAAAAIAAAAAAP7/AAAAAAMAAAAAAP//AAAAAAQAAAACAP3/AAAAAAIAAAACAP7/AAAAAAMAAAACAP//AAAAAAQAAAAIAP3/AAAAAAIAAAAIAP7/AAAAAAMAAAAIAP//AAAAAAQAAAANAP3/AAAAAAIAAAANAP7/AAAAAAMAAAANAP//AAAAAAQAAAAPAP3/AAAAAAIAAAAPAP7/AAAAAAMAAAAPAP//AAAAAAQAAAAWAP3/AAAAAAIAAAAWAP7/AAAAAAMAAAAWAP//AAAAAAQAAAAaAP3/AAAAAAIAAAAaAP7/AAAAAAMAAAAaAP//AAAAAAQAAAAdAP7/AAAAAAMAAAAdAP//AAAAAAQAAAASAP7/AAAAAAAAAAASAP//AAAAAAEAAAALAP7/AAAAAAAAAAALAP//AAAAAAEAAAAYAP7/AAAAAAAAAAAYAP//AAAAAAEAAAD8//7/AAAAAAAAAAD8////AAAAAAEAAAAGAP7/AAAAAAAAAAAGAP//AAAAAAEAAAA=")
 tile_set = SubResource("TileSet_af3po")
 
-[node name="Plants" type="TileMapLayer" parent="Tilemaps" unique_id=1422020474]
+[node name="Plants" type="TileMapLayer" parent="Tilemaps" unique_id=1422020475]
 position = Vector2(0, 250)
 tile_map_data = PackedByteArray("AAD9////AAADAAYAAAADAP//AAADAAYAAAAFAP//AAADAAYAAAAJAP//AAADAAYAAAARAP//AAADAAYAAAAXAP//AAADAAYAAAAcAP//AAADAAYAAAAUAP//AAADAAYAAAA=")
 tile_set = SubResource("TileSet_6r07y")
 
-[node name="Ground" type="TileMapLayer" parent="Tilemaps" unique_id=199645611]
+[node name="Ground" type="TileMapLayer" parent="Tilemaps" unique_id=199645612]
 z_index = 11
 tile_map_data = PackedByteArray("AAD7/wAAAAAAAAAAAAD8/wAAAAABAAAAAAD9/wAAAAABAAAAAAD+/wAAAAABAAAAAAD//wAAAAABAAAAAAAAAAAAAAABAAAAAAABAAAAAAABAAAAAAACAAAAAAABAAAAAAADAAAAAAABAAAAAAAEAAAAAAABAAAAAAAFAAAAAAACAAAAAAD7/wEAAAAAAAEAAAAFAAEAAAACAAEAAAD8/wEAAAABAAEAAAD9/wEAAAABAAEAAAD+/wEAAAABAAEAAAD//wEAAAABAAEAAAAAAAEAAAABAAEAAAABAAEAAAABAAEAAAACAAEAAAABAAEAAAADAAEAAAABAAEAAAAEAAEAAAABAAEAAAD7/wIAAAAAAAIAAAAFAAIAAAACAAIAAAD8/wIAAAABAAIAAAD9/wIAAAABAAIAAAD+/wIAAAABAAIAAAD//wIAAAABAAIAAAAAAAIAAAABAAIAAAABAAIAAAABAAIAAAACAAIAAAABAAIAAAADAAIAAAABAAIAAAAEAAIAAAABAAIAAAAIAAAAAAABAAAAAAAIAAEAAAABAAEAAAAIAAIAAAABAAIAAAAJAAAAAAACAAAAAAAJAAEAAAACAAEAAAAJAAIAAAACAAIAAAAHAAAAAAAAAAAAAAAHAAEAAAAAAAEAAAAHAAIAAAAAAAIAAAAMAAAAAAABAAAAAAAMAAEAAAABAAEAAAAMAAIAAAABAAIAAAANAAAAAAACAAAAAAANAAEAAAACAAEAAAANAAIAAAACAAIAAAALAAAAAAAAAAAAAAALAAEAAAAAAAEAAAALAAIAAAAAAAIAAAAPAAAAAAAAAAAAAAAPAAEAAAAAAAEAAAAPAAIAAAAAAAIAAAAQAAAAAAABAAAAAAAQAAEAAAABAAEAAAAQAAIAAAABAAIAAAARAAAAAAACAAAAAAARAAEAAAACAAEAAAARAAIAAAACAAIAAAATAAAAAAAAAAAAAAATAAEAAAAAAAEAAAATAAIAAAAAAAIAAAAUAAAAAAABAAAAAAAUAAEAAAABAAEAAAAUAAIAAAABAAIAAAAVAAAAAAABAAAAAAAVAAEAAAABAAEAAAAVAAIAAAABAAIAAAAWAAAAAAABAAAAAAAWAAEAAAABAAEAAAAWAAIAAAABAAIAAAAXAAAAAAABAAAAAAAXAAEAAAABAAEAAAAXAAIAAAABAAIAAAAYAAAAAAABAAAAAAAYAAEAAAABAAEAAAAYAAIAAAABAAIAAAAZAAAAAAABAAAAAAAZAAEAAAABAAEAAAAZAAIAAAABAAIAAAAaAAAAAAABAAAAAAAaAAEAAAABAAEAAAAaAAIAAAABAAIAAAAbAAAAAAABAAAAAAAbAAEAAAABAAEAAAAbAAIAAAABAAIAAAAcAAAAAAABAAAAAAAcAAEAAAABAAEAAAAcAAIAAAABAAIAAAAdAAAAAAACAAAAAAAdAAEAAAACAAEAAAAdAAIAAAACAAIAAAD6//7/AQAAAAAAAQD7//7/AQAAAAEAAQD8//7/AQAAAAIAAQD9//7/AQAAAAMAAQD+//7/AQAAAAQAAQD///7/AQAAAAUAAQAAAP7/AQAAAAYAAQABAP7/AQAAAAEAAQACAP7/AQAAAAIAAQADAP7/AQAAAAMAAQAEAP7/AQAAAAQAAQAFAP7/AQAAAAUAAQAGAP7/AQAAAAYAAQAHAP7/AQAAAAEAAQAIAP7/AQAAAAIAAQAJAP7/AQAAAAMAAQAKAP7/AQAAAAQAAQALAP7/AQAAAAUAAQAMAP7/AQAAAAYAAQAdAP7/AQAAAAcAAQANAP7/AQAAAAEAAQAOAP7/AQAAAAIAAQAPAP7/AQAAAAMAAQAQAP7/AQAAAAQAAQARAP7/AQAAAAUAAQASAP7/AQAAAAYAAQATAP7/AQAAAAEAAQAUAP7/AQAAAAIAAQAVAP7/AQAAAAMAAQAWAP7/AQAAAAQAAQAXAP7/AQAAAAUAAQAYAP7/AQAAAAYAAQAZAP7/AQAAAAQAAQAaAP7/AQAAAAMAAQAbAP7/AQAAAAMAAQAcAP7/AQAAAAMAAQAZAP3/AQABAAYAAgAYAP3/AQABAAMAAwAXAP3/AQABAAMAAwAWAP3/AQABAAMAAwAVAP3/AQABAAMAAwAUAP3/AQABAAMAAwATAP3/AQABAAMAAwASAP3/AQABAAMAAwARAP3/AQABAAMAAwAQAP3/AQABAAMAAwAPAP3/AQABAAMAAwAaAP3/AQABAAMAAwAbAP3/AQABAAMAAwAcAP3/AQABAAMAAwAdAP3/AQABAAcAAgD6//3/AQABAAAAAwD7//3/AQABAAMAAwD8//3/AQABAAMAAwD9//3/AQABAAMAAwD+//3/AQABAAMAAwD///3/AQABAAMAAwAAAP3/AQABAAMAAwABAP3/AQABAAMAAwACAP3/AQABAAMAAwADAP3/AQABAAMAAwAEAP3/AQABAAMAAwAFAP3/AQABAAMAAwAGAP3/AQABAAMAAwAHAP3/AQABAAMAAwAIAP3/AQABAAMAAwAJAP3/AQABAAMAAwAKAP3/AQABAAMAAwALAP3/AQABAAMAAwAMAP3/AQABAAMAAwANAP3/AQABAAMAAwAOAP3/AQABAAMAAwA=")
 tile_set = SubResource("TileSet_8i23i")
 
-[node name="Player" parent="." unique_id=876101534 groups=["Player"] instance=ExtResource("5_6444e")]
+[node name="Player" parent="." unique_id=876101535 groups=["Player"] instance=ExtResource("5_6444e")]
 position = Vector2(-905, -65)
 script = ExtResource("6_evi0p")
 
-[node name="Coins" type="Node" parent="." unique_id=597997205]
+[node name="Coins" type="Node" parent="." unique_id=597997206]
 
-[node name="Coin" parent="Coins" unique_id=1932624759 instance=ExtResource("7_lsmp6")]
-position = Vector2(602.9999, -38)
+[node name="Coin" parent="Coins" unique_id=2000000001 instance=ExtResource("7_lsmp6")]
+position = Vector2(300, -38)
 
-[node name="Coin2" parent="Coins" unique_id=2099289275 instance=ExtResource("7_lsmp6")]
-position = Vector2(708, -38)
+[node name="Coin2" parent="Coins" unique_id=2000000002 instance=ExtResource("7_lsmp6")]
+position = Vector2(400, -38)
 
-[node name="Coin3" parent="Coins" unique_id=587792098 instance=ExtResource("7_lsmp6")]
-position = Vector2(815, -38)
+[node name="Coin3" parent="Coins" unique_id=2000000003 instance=ExtResource("7_lsmp6")]
+position = Vector2(500, -38)
 
-[node name="Coin4" parent="Coins" unique_id=126121729 instance=ExtResource("7_lsmp6")]
-position = Vector2(920, -38)
-
-[node name="Coin5" parent="Coins" unique_id=47629979 instance=ExtResource("7_lsmp6")]
+[node name="Coin4" parent="Coins" unique_id=2000000004 instance=ExtResource("7_lsmp6")]
 position = Vector2(2130, -293)
 
-[node name="Coin6" parent="Coins" unique_id=1325726435 instance=ExtResource("7_lsmp6")]
+[node name="Coin5" parent="Coins" unique_id=2000000005 instance=ExtResource("7_lsmp6")]
 position = Vector2(2235, -293)
 
-[node name="Coin7" parent="Coins" unique_id=435869737 instance=ExtResource("7_lsmp6")]
+[node name="Coin6" parent="Coins" unique_id=2000000006 instance=ExtResource("7_lsmp6")]
 position = Vector2(2342, -293)
 
-[node name="Coin8" parent="Coins" unique_id=926481278 instance=ExtResource("7_lsmp6")]
-position = Vector2(3996, -70.000015)
+[node name="Coin7" parent="Coins" unique_id=2000000007 instance=ExtResource("7_lsmp6")]
+position = Vector2(3996, -70)
 
-[node name="Coin9" parent="Coins" unique_id=618875472 instance=ExtResource("7_lsmp6")]
-position = Vector2(4101, -70.000015)
+[node name="Coin8" parent="Coins" unique_id=2000000008 instance=ExtResource("7_lsmp6")]
+position = Vector2(4101, -70)
 
-[node name="Coin10" parent="Coins" unique_id=1525956058 instance=ExtResource("7_lsmp6")]
-position = Vector2(4208, -70.000015)
+[node name="Coin9" parent="Coins" unique_id=2000000009 instance=ExtResource("7_lsmp6")]
+position = Vector2(4208, -70)
 
-[node name="Coin11" parent="Coins" unique_id=1974942072 instance=ExtResource("7_lsmp6")]
-position = Vector2(5439, -296.00003)
+[node name="Coin10" parent="Coins" unique_id=2000000010 instance=ExtResource("7_lsmp6")]
+position = Vector2(6500, -293)
 
-[node name="Coin12" parent="Coins" unique_id=198352621 instance=ExtResource("7_lsmp6")]
-position = Vector2(5551, -226)
+[node name="Coin11" parent="Coins" unique_id=2000000011 instance=ExtResource("7_lsmp6")]
+position = Vector2(6700, -293)
 
-[node name="Coin13" parent="Coins" unique_id=1869055455 instance=ExtResource("7_lsmp6")]
-position = Vector2(5676.0005, -160.00003)
+[node name="Coin12" parent="Coins" unique_id=2000000012 instance=ExtResource("7_lsmp6")]
+position = Vector2(9000, -70)
 
-[node name="Enemies" type="Node" parent="." unique_id=1804646173]
+[node name="Coin13" parent="Coins" unique_id=2000000013 instance=ExtResource("7_lsmp6")]
+position = Vector2(10500, -70)
 
-[node name="Enemy" parent="Enemies" unique_id=312836856 instance=ExtResource("8_xrdnt")]
+[node name="Enemies" type="Node" parent="." unique_id=1804646174]
+
+[node name="Enemy" parent="Enemies" unique_id=2100000001 instance=ExtResource("8_xrdnt")]
 z_index = 9
-position = Vector2(1218, -41)
+position = Vector2(700, -41)
 
-[node name="Enemy2" parent="Enemies" unique_id=1516653369 instance=ExtResource("8_xrdnt")]
+[node name="Enemy2" parent="Enemies" unique_id=2100000002 instance=ExtResource("8_xrdnt")]
 z_index = 9
-position = Vector2(6510, -41)
+position = Vector2(2500, -41)
 
-[node name="Enemy3" parent="Enemies" unique_id=2066388977 instance=ExtResource("8_xrdnt")]
+[node name="Enemy3" parent="Enemies" unique_id=2100000003 instance=ExtResource("8_xrdnt")]
 z_index = 9
-position = Vector2(11553, -41)
+position = Vector2(5000, -41)
 
-[node name="DeathArea" type="Area2D" parent="." unique_id=1515604061]
+[node name="Enemy4" parent="Enemies" unique_id=2100000004 instance=ExtResource("8_xrdnt")]
+z_index = 9
+position = Vector2(8000, -41)
+
+[node name="Enemy5" parent="Enemies" unique_id=2100000005 instance=ExtResource("8_xrdnt")]
+z_index = 9
+position = Vector2(11000, -41)
+
+[node name="DeathArea" type="Area2D" parent="." unique_id=1515604062]
 position = Vector2(5896, 2480.0002)
 scale = Vector2(1200, 23.202)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathArea" unique_id=237536624]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathArea" unique_id=237536625]
 shape = SubResource("RectangleShape2D_lsmp6")
 
-[node name="RespawnPoint" type="Node2D" parent="." unique_id=627177469]
+[node name="RespawnPoint" type="Node2D" parent="." unique_id=627177470]
 unique_name_in_owner = true
 position = Vector2(-1063, -11.000001)
 scale = Vector2(-192970300, 69051.94)
 
-[node name="LevelEnd" type="Area2D" parent="." unique_id=1100000001]
+[node name="LevelEnd" type="Area2D" parent="." unique_id=2200000001]
 position = Vector2(13000, -500)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelEnd" unique_id=1100000002]
-shape = SubResource("RectangleShape2D_levelend1")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelEnd" unique_id=2200000002]
+shape = SubResource("RectangleShape2D_levelend2")
 
 [connection signal="body_entered" from="DeathArea" to="Player" method="_on_death_area_body_entered"]
 [connection signal="body_entered" from="LevelEnd" to="." method="_on_level_end_body_entered"]

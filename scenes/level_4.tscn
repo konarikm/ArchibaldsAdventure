@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://b78jkwltt8nii" path="res://scenes/coin.tscn" id="8_bee8o"]
 [ext_resource type="PackedScene" uid="uid://cqf801v6fthrw" path="res://scenes/enemy_fast.tscn" id="9_y88yj"]
 [ext_resource type="PackedScene" uid="uid://cgj526506jlef" path="res://scenes/enemy.tscn" id="10_675ay"]
+[ext_resource type="PackedScene" uid="uid://bj8bw3fcvfpbe" path="res://scenes/portal.tscn" id="11_rr1tt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xrdnt"]
 texture = ExtResource("2_rr1tt")
@@ -378,20 +379,6 @@ sources/1 = SubResource("TileSetAtlasSource_oovug")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lsmp6"]
 size = Vector2(27.713333, 20)
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_56dhn"]
-radius = 93.0
-height = 520.0
-
-[sub_resource type="Gradient" id="Gradient_chwpn"]
-colors = PackedColorArray(0.84313726, 0, 1, 1, 0.84313726, 0, 1, 0)
-metadata/_snap_enabled = true
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_ax3dk"]
-gradient = SubResource("Gradient_chwpn")
-fill = 1
-fill_from = Vector2(0.5, 0.5)
-fill_to = Vector2(1, 0.5)
-
 [node name="Level 4" type="Node2D" unique_id=1533892986]
 script = ExtResource("1_cp0rv")
 
@@ -516,17 +503,9 @@ unique_name_in_owner = true
 position = Vector2(-1585, 240.99997)
 scale = Vector2(-192970300, 69051.94)
 
-[node name="LevelEnd" type="Area2D" parent="." unique_id=471191213]
-position = Vector2(20223, -178)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelEnd" unique_id=1983512289]
-position = Vector2(-1, 8)
-shape = SubResource("CapsuleShape2D_56dhn")
-
-[node name="Sprite2D" type="Sprite2D" parent="LevelEnd" unique_id=1665840594]
-position = Vector2(3.9997559, 2)
-scale = Vector2(8.656263, 13.312501)
-texture = SubResource("GradientTexture2D_ax3dk")
+[node name="Portal" parent="." unique_id=1860286607 instance=ExtResource("11_rr1tt")]
+position = Vector2(20219, -165)
+next_scene_path = "uid://7jdv7rb60ro1"
+coins_required = 60
 
 [connection signal="body_entered" from="DeathArea" to="Player" method="_on_death_area_body_entered"]
-[connection signal="body_entered" from="LevelEnd" to="." method="_on_level_end_body_entered"]

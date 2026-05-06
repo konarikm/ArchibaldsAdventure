@@ -495,7 +495,7 @@ position = Vector2(-2456, -170.99998)
 scale = Vector2(-192970300, 69051.94)
 
 [node name="LevelEnd" parent="." unique_id=1860286607 instance=ExtResource("10_2y5yt")]
-position = Vector2(14463, -187)
+position = Vector2(13000, -500)
 next_scene_path = "uid://dd4h7vjsrseon"
 coins_required = 20
 

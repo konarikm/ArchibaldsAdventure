@@ -5,6 +5,11 @@ var coins: int = 0:
 		coins = value
 		update_gui()
 
+var target_coins: int = 0:
+	set(value):
+		target_coins = value
+		update_gui()
+		
 var score: int = 0:
 	set(value):
 		score = value
@@ -40,5 +45,9 @@ func update_gui():
 	var score_label = get_node_or_null("GUI/ScoreValue")
 	
 	if coins_label and score_label:
-		coins_label.text = str(coins)
 		score_label.text = str(score)
+		
+		if target_coins > 0:
+			coins_label.text = str(coins) + " / " + str(target_coins)
+		else:
+			coins_label.text = str(coins)

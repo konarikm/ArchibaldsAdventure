@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://bq2b3dobhi6la" path="res://scripts/player.gd" id="6_evi0p"]
 [ext_resource type="PackedScene" uid="uid://b78jkwltt8nii" path="res://scenes/coin.tscn" id="7_lsmp6"]
 [ext_resource type="PackedScene" uid="uid://cgj526506jlef" path="res://scenes/enemy.tscn" id="8_xrdnt"]
+[ext_resource type="PackedScene" uid="uid://bj8bw3fcvfpbe" path="res://scenes/portal.tscn" id="10_que50"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xrdnt"]
 texture = ExtResource("1_7p6j4")
@@ -365,20 +366,6 @@ sources/1 = SubResource("TileSetAtlasSource_oovug")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lsmp6"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wrinw"]
-radius = 93.0
-height = 520.0
-
-[sub_resource type="Gradient" id="Gradient_6cvei"]
-colors = PackedColorArray(0.84313726, 0, 1, 1, 0.84313726, 0, 1, 0)
-metadata/_snap_enabled = true
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_af3po"]
-gradient = SubResource("Gradient_6cvei")
-fill = 1
-fill_from = Vector2(0.5, 0.5)
-fill_to = Vector2(1, 0.5)
-
 [node name="Level 2" type="Node2D" unique_id=1533892985]
 script = ExtResource("1_wrinw")
 
@@ -477,17 +464,9 @@ unique_name_in_owner = true
 position = Vector2(-1041, -184.00002)
 scale = Vector2(-192970300, 69051.94)
 
-[node name="LevelEnd" type="Area2D" parent="." unique_id=861338201]
-position = Vector2(13995, -698)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelEnd" unique_id=828038869]
-position = Vector2(-8, -3)
-shape = SubResource("CapsuleShape2D_wrinw")
-
-[node name="Sprite2D" type="Sprite2D" parent="LevelEnd" unique_id=190486843]
-position = Vector2(-18, 4)
-scale = Vector2(8.656263, 13.312501)
-texture = SubResource("GradientTexture2D_af3po")
+[node name="Portal" parent="." unique_id=1860286607 instance=ExtResource("10_que50")]
+position = Vector2(14033, -696)
+next_scene_path = "uid://dd4i7vjsrseoo"
+coins_required = 30
 
 [connection signal="body_entered" from="DeathArea" to="Player" method="_on_death_area_body_entered"]
-[connection signal="body_entered" from="LevelEnd" to="." method="_on_level_end_body_entered"]

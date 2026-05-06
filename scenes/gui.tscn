@@ -50,28 +50,37 @@ animations = [{
 script = ExtResource("1_mfius")
 
 [node name="CoinsValue" type="Label" parent="." unique_id=1331376347]
-offset_left = 1027.0
-offset_top = 6.0
-offset_right = 1083.0
-offset_bottom = 75.0
-theme_override_font_sizes/font_size = 50
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -134.0
+offset_top = 12.0
+offset_right = -74.0
+offset_bottom = 81.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 40
 text = "0"
+horizontal_alignment = 2
+vertical_alignment = 1
 
 [node name="ScoreValue" type="Label" parent="." unique_id=2084607841]
-anchors_preset = -1
-anchor_right = 0.062000003
-anchor_bottom = 0.067
-offset_left = 1032.0
-offset_top = 73.0
-offset_right = 1029.576
-offset_bottom = 116.584
-theme_override_font_sizes/font_size = 30
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -134.0
+offset_top = 63.0
+offset_right = -74.0
+offset_bottom = 176.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 40
 text = "0
 "
+horizontal_alignment = 2
+vertical_alignment = 1
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1974394649]
-position = Vector2(1104, 40)
-scale = Vector2(2.5000076, 2.5)
+position = Vector2(1107, 48)
+scale = Vector2(2.3750029, 2.5)
 sprite_frames = SubResource("SpriteFrames_7yii4")
 autoplay = "default"
 frame = 1

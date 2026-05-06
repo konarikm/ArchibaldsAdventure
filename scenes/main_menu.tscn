@@ -21,7 +21,7 @@ theme_override_colors/font_shadow_color = Color(0.6514241, 0.29678825, 0.6934311
 theme_override_colors/font_outline_color = Color(0.16168436, 0, 0.96990246, 1)
 theme_override_constants/line_spacing = 3
 theme_override_font_sizes/font_size = 80
-text = "Pinky Wizard"
+text = "Archibald's adventure"
 
 [node name="Play" type="Button" parent="CanvasLayer" unique_id=1188924645]
 anchors_preset = 8
@@ -59,7 +59,7 @@ theme_override_colors/font_pressed_color = Color(0.85490197, 0.53333336, 0.91764
 theme_override_colors/font_hover_color = Color(0.85490197, 0.53333336, 0.91764706, 1)
 theme_override_colors/font_hover_pressed_color = Color(0.85490197, 0.53333336, 0.91764706, 1)
 theme_override_font_sizes/font_size = 30
-text = "Controls"
+text = "How to play"
 
 [connection signal="pressed" from="CanvasLayer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="CanvasLayer/Controls" to="." method="_on_controls_pressed"]

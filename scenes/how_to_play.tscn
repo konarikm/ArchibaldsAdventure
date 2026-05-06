@@ -27,48 +27,27 @@ text = "HOW TO PLAY"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Label2" type="Label" parent="." unique_id=512784576]
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1697655172]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -257.5
-offset_top = -131.0
-offset_right = 257.5
-offset_bottom = -20.0
+offset_left = -366.0
+offset_top = -152.0
+offset_right = 365.5
+offset_bottom = 18.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_color = Color(0.85490197, 0.53333336, 0.91764706, 1)
-theme_override_font_sizes/font_size = 35
-text = "1) Kill monsters
-2) Collect coins
-3) Find the magical portal to the next level!"
-horizontal_alignment = 1
-vertical_alignment = 1
+theme_override_font_sizes/normal_font_size = 22
+theme_override_font_sizes/bold_font_size = 22
+bbcode_enabled = true
+text = "[b][color=#da88ea]Survive the forest:[/color][/b] Defeat toxic monsters using your pink magic.
 
-[node name="Label3" type="Label" parent="." unique_id=395528513]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -217.5
-offset_top = 28.0
-offset_right = 217.5
-offset_bottom = 253.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 25
-text = "Movement - LEFT/RIGHT Arrow or A/D
-Jump - UP Arrow or W
-Sprint - SHIFT
-Shoot - E
+[b][color=#da88ea]Gather energy:[/color][/b] Collect Sun Gold Fragments to power up the portal.
 
-"
+[b][color=#da88ea]Escape:[/color][/b] Enter the illuminated portal to reach the next level!"
 horizontal_alignment = 1
 
 [node name="Button" type="Button" parent="." unique_id=1050951914]
@@ -87,5 +66,71 @@ grow_vertical = 0
 theme_override_colors/font_color = Color(0.85490197, 0.53333336, 0.91764706, 1)
 theme_override_font_sizes/font_size = 40
 text = "Back to menu"
+
+[node name="GridContainer" type="GridContainer" parent="." unique_id=29131696]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -168.0
+offset_top = 23.0
+offset_right = 168.0
+offset_bottom = 153.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/h_separation = 60
+theme_override_constants/v_separation = 2
+columns = 2
+
+[node name="Movement" type="Label" parent="GridContainer" unique_id=562014417]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 22
+text = "Movement"
+horizontal_alignment = 2
+uppercase = true
+
+[node name="Label" type="Label" parent="GridContainer" unique_id=1515313655]
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "[A][D] or [←][→]"
+
+[node name="Jump" type="Label" parent="GridContainer" unique_id=521044751]
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "Jump"
+horizontal_alignment = 2
+uppercase = true
+
+[node name="Label3" type="Label" parent="GridContainer" unique_id=1728935282]
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "[W] or [↑]"
+
+[node name="Sprint" type="Label" parent="GridContainer" unique_id=1919732491]
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "Sprint"
+horizontal_alignment = 2
+uppercase = true
+
+[node name="Label2" type="Label" parent="GridContainer" unique_id=2123496598]
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "[SHIFT]"
+
+[node name="Shoot" type="Label" parent="GridContainer" unique_id=1411018309]
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "Shoot"
+horizontal_alignment = 2
+uppercase = true
+
+[node name="Label4" type="Label" parent="GridContainer" unique_id=953788067]
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+text = "[E]"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

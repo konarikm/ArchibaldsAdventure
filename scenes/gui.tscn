@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bkju4sqlx0nrp"]
 
 [ext_resource type="Texture2D" uid="uid://dyu36hulncdg0" path="res://assets/Coin_Gems/MonedaD.png" id="1_efmwq"]
+[ext_resource type="Script" uid="uid://dktnjmc3ccsax" path="res://scripts/gui.gd" id="1_mfius"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mfius"]
 atlas = ExtResource("1_efmwq")
@@ -46,33 +47,49 @@ animations = [{
 }]
 
 [node name="GUI" type="CanvasLayer" unique_id=748578917]
+script = ExtResource("1_mfius")
 
 [node name="CoinsValue" type="Label" parent="." unique_id=1331376347]
-offset_left = 1011.0
-offset_top = 1.0
-offset_right = 1079.0
-offset_bottom = 84.0
-theme_override_font_sizes/font_size = 60
+offset_left = 1027.0
+offset_top = 6.0
+offset_right = 1083.0
+offset_bottom = 75.0
+theme_override_font_sizes/font_size = 50
 text = "0"
-horizontal_alignment = 2
 
 [node name="ScoreValue" type="Label" parent="." unique_id=2084607841]
 anchors_preset = -1
 anchor_right = 0.062000003
 anchor_bottom = 0.067
-offset_left = 1063.0
-offset_top = 79.0
-offset_right = 1034.576
-offset_bottom = 122.584
+offset_left = 1032.0
+offset_top = 73.0
+offset_right = 1029.576
+offset_bottom = 116.584
 theme_override_font_sizes/font_size = 30
 text = "0
 "
-horizontal_alignment = 2
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1974394649]
-position = Vector2(1101, 45)
-scale = Vector2(3, 3)
+position = Vector2(1104, 40)
+scale = Vector2(2.5000076, 2.5)
 sprite_frames = SubResource("SpriteFrames_7yii4")
 autoplay = "default"
 frame = 1
 frame_progress = 0.64467263
+
+[node name="BackButton" type="Button" parent="." unique_id=480971264]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 140.0
+offset_bottom = 66.0
+theme_override_font_sizes/font_size = 15
+text = "Back to menu"
+
+[node name="ConfirmationDialog" type="ConfirmationDialog" parent="." unique_id=1164191878]
+process_mode = 3
+title = "Warning"
+dialog_text = "All your progress will be lost. Are you sure?"
+
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="canceled" from="ConfirmationDialog" to="." method="_on_confirmation_dialog_canceled"]
+[connection signal="confirmed" from="ConfirmationDialog" to="." method="_on_confirmation_dialog_confirmed"]

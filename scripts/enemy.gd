@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-const SPEED = 300.0
+const SPEED = 250.0
 var movingRight = 1
 var canSwitch = true
 
@@ -24,4 +24,8 @@ func _physics_process(delta: float) -> void:
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
-		body.killPlayer() 
+		body.killPlayer()
+		if GameManager.score >= 200:
+			GameManager.score -= 200
+		else:
+			GameManager.score = 0

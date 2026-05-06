@@ -243,7 +243,7 @@ animations = [{
 radius = 41.0
 height = 220.0
 
-[node name="Player" type="CharacterBody2D" unique_id=876101534]
+[node name="Player" type="CharacterBody2D" unique_id=876101534 groups=["Player"]]
 z_index = 10
 script = SubResource("GDScript_8eeqe")
 
@@ -259,7 +259,7 @@ position = Vector2(-1, 9)
 shape = SubResource("CapsuleShape2D_aclic")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=112689199]
-zoom = Vector2(0.5, 0.5)
+zoom = Vector2(0.32, 0.32)
 limit_bottom = 900
 
 [node name="MagicSpawnPoint" type="Node2D" parent="." unique_id=1084438516]

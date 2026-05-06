@@ -2,15 +2,11 @@
 
 [ext_resource type="Script" uid="uid://btdw0t6cgc0s" path="res://scripts/game_manager.gd" id="1_oj352"]
 [ext_resource type="PackedScene" uid="uid://bkju4sqlx0nrp" path="res://scenes/gui.tscn" id="2_e5fcp"]
-[ext_resource type="AudioStream" uid="uid://bwiystpaenjrq" path="res://assets/Sounds/Light Ambience 3.wav" id="3_sq00h"]
 
 [node name="GameManager" type="Node" unique_id=990570114]
 script = ExtResource("1_oj352")
 
 [node name="GUI" parent="." unique_id=748578917 instance=ExtResource("2_e5fcp")]
-visible = false
 
-[node name="BackgroundMusic" type="AudioStreamPlayer" parent="." unique_id=1385085301]
-stream = ExtResource("3_sq00h")
-volume_db = -15.0
-autoplay = true
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="." unique_id=1385085301]
+volume_db = -10.0

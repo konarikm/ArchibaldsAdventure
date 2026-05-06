@@ -31,6 +31,8 @@ project/assembly_name="PinkyWizard"
 
 Player=""
 Enemy=""
+Enemy_Fast=""
+Enemy_Normal=""
 
 [input]
 

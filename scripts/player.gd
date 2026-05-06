@@ -5,9 +5,18 @@ extends CharacterBody2D
 
 
 const SPEED = 700.0
-const JUMP_VELOCITY = -1400.0
+const JUMP_VELOCITY = -2000.0
 
+@export var magic_cooldown: float = 1 
+# Boolean flag to check if the player is currently allowed to shoot
+var can_cast_magic: bool = true
 
+var is_spawning: bool = true
+
+func _ready() -> void:
+	await get_tree().create_timer(0.2).timeout
+	is_spawning = false
+	
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
@@ -45,7 +54,9 @@ func _physics_process(delta: float) -> void:
 		
 	move_and_slide()
 
-	if Input.is_action_just_pressed("magic"):
+	if Input.is_action_just_pressed("magic") and can_cast_magic:
+		can_cast_magic = false
+		
 		var magicNode = load("res://scenes/magic_area.tscn")
 		var newMagic = magicNode.instantiate()
 		
@@ -57,10 +68,22 @@ func _physics_process(delta: float) -> void:
 		newMagic.set_position($MagicSpawnPoint.global_transform.origin)
 		get_parent().add_child(newMagic)
 		GameManager.playSoundFX(shoot_sound)
-
+		
+		await get_tree().create_timer(magic_cooldown).timeout
+		can_cast_magic = true
+		
 func killPlayer():
 	position = %RespawnPoint.position
 	$AnimatedSprite2D.flip_h = false
 
 func _on_death_area_body_entered(body: Node2D) -> void:
+	if is_spawning:
+		return
+		
 	killPlayer()
+	if GameManager.score >= 1000:
+		GameManager.score -= 1000
+	else:
+		GameManager.score = 0
+	
+	

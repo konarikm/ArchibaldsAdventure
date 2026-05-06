@@ -1,9 +1,10 @@
 extends Area2D
 
-@onready var hit_sound = preload("res://assets/Sounds/Retro Blop 22.wav")
+@onready var hit_sound = preload("res://assets/Sounds/Retro Blop 18.wav")
+@onready var hit_sound_fast = preload("res://assets/Sounds/Retro Blop 22.wav")
 
-var speed = 1500
-var lifetime = 0.8
+var speed = 1700
+var lifetime = 0.85
 var velocity
 var playerObject
 var direction = 1
@@ -31,8 +32,15 @@ func _on_timer_timeout():
 
 func _on_area_entered(area: Area2D) -> void:
 	if area.is_in_group("Enemy"):
-		GameManager.score += 200
-		GameManager.playSoundFX(hit_sound)
+		
+		if area.is_in_group("Enemy_Fast"):
+			GameManager.score += 250
+			GameManager.playSoundFX(hit_sound_fast)
+			
+		else:
+			GameManager.score += 100
+			GameManager.playSoundFX(hit_sound)
+			
 		area.get_parent().queue_free()
 		queue_free()
 		

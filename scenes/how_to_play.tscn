@@ -95,7 +95,7 @@ uppercase = true
 [node name="Label" type="Label" parent="GridContainer" unique_id=1515313655]
 layout_mode = 2
 theme_override_font_sizes/font_size = 22
-text = "[A][D] or [←][→]"
+text = "[A][D] or  [LEFT][RIGHT]"
 
 [node name="Jump" type="Label" parent="GridContainer" unique_id=521044751]
 layout_mode = 2
@@ -107,7 +107,7 @@ uppercase = true
 [node name="Label3" type="Label" parent="GridContainer" unique_id=1728935282]
 layout_mode = 2
 theme_override_font_sizes/font_size = 22
-text = "[W] or [↑]"
+text = "[W] or [UP]"
 
 [node name="Sprint" type="Label" parent="GridContainer" unique_id=1919732491]
 layout_mode = 2

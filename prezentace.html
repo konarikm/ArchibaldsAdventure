@@ -214,6 +214,48 @@
     box-shadow:0 16px 52px rgba(218,136,234,.38),0 0 0 1px rgba(255,255,255,.06);
   }
 
+  /* === QR CODE STYLING === */
+  .qr-wrapper {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .qr-frame {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(218, 136, 234, 0.25);
+    width: 240px;
+    height: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(218, 136, 234, 0.3);
+  }
+  .qr-frame img, .qr-frame svg {
+    width: 100%;
+    height: 100%;
+  }
+  .qr-warning {
+    font-size: 14px;
+    font-weight: 500;
+    color: #DA88EA;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    max-width: 400px;
+    line-height: 1.4;
+    opacity: 0.9;
+  }
+  .qr-sub-warning {
+    display: block;
+    color: #6e6e73;
+    font-size: 12px;
+    text-transform: none;
+    letter-spacing: 0;
+    margin-top: 4px;
+  }
 </style>
 </head>
 <body>
@@ -227,7 +269,7 @@
 <div class="slide-container s-title active" data-slide="01 / 11">
   <div class="glow-orb"></div>
   <h1 class="display gradient-text">Archibald's<br>Adventure</h1>
-  <p class="subtitle">2D akční plošinovka</p>
+  <p class="subtitle">Martin Koňařík & Libor Výleta</p>
   <div class="brandmark"><span>●</span>&nbsp;&nbsp;AP8PO · 2026</div>
 </div>
 
@@ -246,10 +288,10 @@
 <!-- ============================================================ -->
 <div class="slide-container s-bleed" data-slide="03 / 11">
   <div class="text">
-    <div class="eyebrow">Kdo je Archibald</div>
-    <h3>Mág, který<br>chtěl <span class="purple">příliš mnoho</span>.</h3>
-    <p class="body">Student Magické akademie. Specialista na vzácnou, nestabilní <span class="purple">amarantovou magii</span>. Jeden experiment, jedna chyba ve výpočtech.</p>
-    <p class="body">Záblesk roztrhl realitu — Archibald se zřítil do prázdnoty. Probudil se ve Hvozdu. <span class="purple">Les ho nechce pustit.</span></p>
+    <div class="eyebrow">Ztracen v temnotě</div>
+    <p class="body">Archibald býval nadějným studentem magické akademie. Jeden nepovedený experiment s nestabilní energií ho ale uvrhl do temného Hvozdu zapomnění – místa, kde se čas měří jen podle toho, jak dlouho dokážete zůstat naživu.</p>
+    <p class="body">Tento prales nesnáší vetřelce. Na každém kroku číhají toxické příšery, proti kterým má Archibald jedinou obranu: svou vlastní, ničivou amarantovou magii.</p>
+    <p class="body">Jedinou nadějí na návrat jsou prastaré portály. Ty jsou ale vyhaslé a bez života. Aby je Archibald dokázal probudit a otevřel si cestu dál, musí v nepřátelském lese riskovat vše a posbírat ztracené Úlomky slunečního zlata. Začíná jeho boj o přežití.</p>
   </div>
   <div class="image">
     <svg viewBox="0 0 640 720" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;height:100%">
@@ -263,36 +305,18 @@
       </defs>
       <rect width="640" height="720" fill="url(#s3sky)"/>
       <!-- Portal rift wide glow -->
-      <rect x="278" y="138" width="84" height="444" rx="42" fill="#6B21A8" opacity="0.22" filter="url(#s3blg)"/>
+      <rect x="278" y="200" width="84" height="200" rx="42" fill="#6B21A8" opacity="0.22" filter="url(#s3blg)"/>
       <!-- Portal rift tight glow -->
-      <rect x="312" y="166" width="16" height="388" rx="8" fill="#DA88EA" opacity="0.38" filter="url(#s3bsm)"/>
+      <rect x="312" y="220" width="16" height="200" rx="8" fill="#DA88EA" opacity="0.38" filter="url(#s3bsm)"/>
       <!-- Back tree layer -->
       <path d="M0,720 V355 L16,338 L28,310 L40,333 L54,305 L68,328 L82,300 L98,323 L114,295 L130,319 L146,291 L163,315 L180,287 L196,311 L214,283 L230,307 L248,279 L264,303 L282,275 L298,299 L316,271 L332,295 L350,268 L366,292 L384,265 L400,289 L418,262 L434,286 L452,259 L468,283 L486,256 L502,280 L520,253 L536,277 L554,250 L570,275 L588,248 L604,272 L622,246 L640,270 V720 Z" fill="#0d1220"/>
       <!-- Mid tree layer -->
       <path d="M0,720 V468 L14,446 L22,416 L34,440 L48,408 L62,434 L78,402 L94,428 L110,396 L128,423 L144,391 L162,418 L178,386 L196,414 L212,382 L230,410 L246,378 L264,406 L280,374 L298,402 L314,370 L332,398 L348,366 L366,394 L382,362 L400,390 L416,358 L434,387 L450,355 L468,383 L484,351 L502,380 L518,348 L536,377 L552,345 L570,374 L586,342 L604,372 L620,340 L640,368 V720 Z" fill="#080c14"/>
-      <!-- Rift crack -->
-      <line x1="320" y1="164" x2="320" y2="554" stroke="#DA88EA" stroke-width="1.5" opacity="0.8"/>
-      <!-- Energy particles along rift -->
-      <circle cx="320" cy="236" r="2.5" fill="#DA88EA" opacity="0.95"/>
-      <circle cx="317" cy="290" r="1.5" fill="#DA88EA" opacity="0.6"/>
-      <circle cx="323" cy="338" r="2"   fill="#F5C518" opacity="0.8"/>
-      <circle cx="318" cy="385" r="1.5" fill="#DA88EA" opacity="0.55"/>
-      <circle cx="322" cy="432" r="2.5" fill="#DA88EA" opacity="0.82"/>
-      <circle cx="315" cy="474" r="1.5" fill="#F5C518" opacity="0.65"/>
-      <!-- Portal ring -->
-      <circle cx="320" cy="358" r="24" fill="none" stroke="#DA88EA" stroke-width="1.2" opacity="0.45"/>
-      <circle cx="320" cy="358" r="40" fill="none" stroke="#A64CB1" stroke-width="0.7" opacity="0.25"/>
       <!-- Foreground trees – left -->
       <path d="M0,720 V376 L18,292 L8,158 L28,268 L44,192 L34,88 L54,182 L68,114 L58,44 L78,138 L92,190 L82,272 L100,234 L116,302 L110,380 L126,416 L126,720 Z" fill="#040608"/>
       <!-- Foreground trees – right -->
       <path d="M514,720 L514,408 L520,376 L515,294 L528,212 L518,126 L534,198 L550,146 L540,70 L556,152 L570,208 L560,294 L576,256 L586,318 L580,400 L596,430 L596,720 Z" fill="#040608"/>
-      <!-- Sun Gold Fragments scattered -->
-      <circle cx="172" cy="288" r="2.5" fill="#F5C518" opacity="0.52"/>
-      <circle cx="456" cy="244" r="2"   fill="#F5C518" opacity="0.42"/>
-      <circle cx="92"  cy="405" r="1.5" fill="#F5C518" opacity="0.36"/>
-      <circle cx="548" cy="345" r="2"   fill="#F5C518" opacity="0.44"/>
-      <circle cx="235" cy="195" r="1.5" fill="#F5C518" opacity="0.32"/>
-      <circle cx="408" cy="316" r="2"   fill="#F5C518" opacity="0.47"/>
+      
     </svg>
   </div>
   <div class="brandmark"><span>●</span>&nbsp;&nbsp;PŘÍBĚH</div>
@@ -318,7 +342,7 @@
     <div class="tile">
       <div class="icon">✦</div>
       <h4>Amarantová magie</h4>
-      <p>Archibaldova jediná zbraň. Ničivé růžové projektily — pro vyslání projektilu stiskni klávesu <strong style="color:#DA88EA">E</strong> a zabij nepřátele.</p>
+      <p>Archibaldova jediná zbraň. Ničivé růžové projektily zabijí nepřátele ve <span class="purple">Hvozdu zapomnění</span>.</p>
     </div>
     <div class="tile">
       <div class="icon">◯</div>
@@ -331,8 +355,8 @@
       <p>Roztroušené v každém levelu. Nasbírej jich dostatek a portál se rozzáří a otevře cestu dál.</p>
     </div>
     <div class="tile">
-      <div class="icon icon-orange">▲</div>
-      <h4>Tvorové lesa</h4>
+      <div class="icon icon-orange">☠</div>
+      <h4>Nebezpeční tvorové</h4>
       <p><span style="color:#5af574">Mechoví slizouni</span> — pomalí, ale jedovatí. <br><span style="color:#ea9947">Zdivočelí trnovci</span> — bleskový útok a bodlavé trny</p>
     </div>
   </div>
@@ -345,7 +369,6 @@
 <div class="slide-container s-controls" data-slide="06 / 11">
   <div class="ctrl-left">
     <div class="eyebrow">Ovládání</div>
-    <div class="ctrl-title">Jak <span class="purple">hrát</span></div>
     <div class="control-row">
       <span class="control-name">Pohyb</span>
       <div class="keys">
@@ -380,7 +403,6 @@
   </div>
   <div class="ctrl-right">
     <div class="eyebrow">Skóre</div>
-    <div class="ctrl-title">Bodování</div>
     <div class="score-row">
       <span class="score-badge gold">+50</span>
       <span class="score-desc">Za každý sebraný Úlomek slunečního zlata</span>
@@ -414,8 +436,7 @@
 <!-- ============================================================ -->
 <div class="slide-container s-section" data-slide="07 / 11">
   <div class="vignette-right"></div>
-  <div class="eyebrow">Engine · Architektura · Obsah</div>
-  <h2 class="gradient-text">Pod<br>Kapotou.</h2>
+  <h2 class="gradient-text">Pod<br>Kapotou</h2>
   <div class="accent-bar"></div>
   <div class="brandmark"><span>●</span>&nbsp;&nbsp;TECHNICKÉ ZÁKLADY</div>
 </div>
@@ -453,8 +474,7 @@
 <!-- ============================================================ -->
 <div class="slide-container s-tiles" data-slide="09 / 11">
   <div class="header">
-    <div class="eyebrow">Pod kapotou</div>
-    <h3>Postaveno na <span class="gradient-text">Godot 4</span>.</h3>
+    <h3>Postaveno na <span class="gradient-text">Godot 4</span></h3>
   </div>
   <div class="tile-grid">
     <div class="tile">
@@ -542,9 +562,19 @@
 <!-- ============================================================ -->
 <div class="slide-container s-cta" data-slide="11 / 11">
   <div class="glow-orb"></div>
-  <h1 class="display gradient-text">Vstup do<br>Hvozdu</h1>
-  <p class="subtitle">Archibald čeká. Fragmenty jsou roztroušené. Portály spí.</p>
-  <div class="cta-button">Zahraj si teď <span style="font-size:22px;margin-left:4px">→</span></div>
+  <h1 class="display gradient-text">Vstupte do Hvozdu</h1>
+  <p class="subtitle">Archibald čeká. Naskenujte a vydejte se na cestu.</p>
+  
+  <div class="qr-wrapper">
+    <div class="qr-frame">
+      <img src="qr-code.svg" alt="QR kód">
+    </div>
+    <p class="qr-warning">
+      Hra je určena pro PC prohlížeče
+      <span class="qr-sub-warning">Naskenujte mobilem pro uložení odkazu do počítače.<br>Na mobilních zařízeních nelze hru ovládat.</span>
+    </p>
+  </div>
+
   <div class="brandmark"><span>●</span>&nbsp;&nbsp;AP8PO · 2026</div>
 </div>
 
